@@ -69,22 +69,22 @@ function Modal() {
     toast.dismiss()
   }
 
-  useEffect(() => {
-    if (user) {
-      return onSnapshot(
-        collection(db, 'customers', user.uid, 'myList'),
-        (snapshot) => setMovies(snapshot.docs)
-      )
-    }
-  }, [db, movie?.id])
+  // useEffect(() => {
+  //   if (user) {
+  //     return onSnapshot(
+  //       collection(db, 'customers', user.uid, 'myList'),
+  //       (snapshot) => setMovies(snapshot.docs)
+  //     )
+  //   }
+  // }, [db])
 
-  useEffect(
-    () =>
-      setAddedToList(
-        movies.findIndex((result) => result.data().id === movie?.id) !== -1
-      ),
-    [movies]
-  )
+  // useEffect(
+  //   () =>
+  //     setAddedToList(
+  //       movies.findIndex((result) => result.data().id === movie?.id) !== -1
+  //     ),
+  //   [movies]
+  // )
 
   const handleList = async () => {
     if (addedToList) {

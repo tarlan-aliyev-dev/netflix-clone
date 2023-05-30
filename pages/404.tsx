@@ -1,5 +1,6 @@
 import AnimatedXButton from '@/components/AnimatedXButton'
 import TransitionEffect from '@/components/TransitionEffect'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -11,8 +12,9 @@ const ErrorPage = () => {
         <div className="flex flex-col items-center justify-center px-5 mx-auto my-8">
           <nav className="px-12 py-5 h-20 flex items-center space-x-2 md:space-x-10">
             <title>Netflix</title>
-            <img
+            <Image
               src="https://rb.gy/ulxxee"
+              alt="bruh"
               className="absolute left-4 top-4 cursor-pointer object-contain md:left-10 md:top-6"
               width={150}
               height={150}
@@ -52,8 +54,8 @@ const ErrorPage = () => {
               Opss...! You are lost.
             </p>
             <p className="mt-4 mb-8 dark:text-gray-400 text-white">
-              We could'n find the page. Please go back and I'm sure you can find
-              that you're looking for
+              We could&apos;n find the page. Please go back and I&apos;m sure
+              you can find that you&apos;re looking for
             </p>
             <Link
               href="/"

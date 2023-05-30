@@ -7,6 +7,7 @@ import MobileMenu from './MobileMenu'
 import AccountMenu from './AccountMenu'
 import SearchBox from './SearchBox'
 import BellMenu from './BellMenu'
+import Image from 'next/image'
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -49,7 +50,8 @@ function Header() {
       } w-full fixed z-40`}
     >
       <div className="flex items-center space-x-2 md:space-x-10">
-        <img
+        <Image
+          alt=""
           src="https://rb.gy/ulxxee"
           width={100}
           height={100}
@@ -99,7 +101,7 @@ function Header() {
           className="flex flex-row items-center gap-2 cursor-pointer relative"
         >
           <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">
-            <img src="https://rb.gy/g1pwyx" alt="" />
+            <Image src="https://rb.gy/g1pwyx" alt="" />
           </div>
           <FaChevronDown
             className={`w-4 text-white fill-white transition ${

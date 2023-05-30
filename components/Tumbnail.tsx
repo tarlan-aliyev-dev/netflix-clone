@@ -7,6 +7,7 @@ import { useRecoilState } from 'recoil'
 import { modalState, movieState } from '@/atoms/modalAtom.'
 import ReactPlayer from 'react-player'
 import useAuth from '@/hooks/useAuth'
+import Image from 'next/image'
 
 interface Props {
   movie: Movie
@@ -39,7 +40,7 @@ function Thumbnail({ movie }: Props) {
 
   return (
     <div className="relative group bg-zinc-900 h-28 min-w-[180px] cursor-pointer transition duration-200 ease-out md:h-36 md:min-w-[260px]">
-      <img
+      <Image
         onClick={redirectToWatch}
         draggable={false}
         src={`https://image.tmdb.org/t/p/w500${
@@ -77,7 +78,7 @@ function Thumbnail({ movie }: Props) {
         group-hover:opacity-100
       "
       >
-        <img
+        <Image
           onClick={redirectToWatch}
           draggable={false}
           src={`https://image.tmdb.org/t/p/w500${

@@ -1,6 +1,7 @@
 import TransitionEffect from '@/components/TransitionEffect'
 import Info from '@/components/info/Info'
 import useAuth from '@/hooks/useAuth'
+import Image from 'next/image'
 import { useState, useCallback } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
@@ -47,7 +48,8 @@ function Login() {
       <div className="bg-black w-full h-full lg:bg-opacity-50">
         <nav className="px-12 py-5">
           <title>Netflix</title>
-          <img
+          <Image
+            alt=""
             src="https://rb.gy/ulxxee"
             className="absolute left-4 top-4 cursor-pointer object-contain md:left-10 md:top-6"
             width={150}
@@ -260,8 +262,8 @@ function Login() {
           </form>
         </div>
       </div>
-      <div className='bg-black'>
-      <Info />
+      <div className="bg-black">
+        <Info />
       </div>
     </div>
   )
